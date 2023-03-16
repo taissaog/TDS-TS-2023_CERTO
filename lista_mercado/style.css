@@ -1,0 +1,24 @@
+.checked{
+    text-decoration: line-through;
+    color: rgb(78, 1, 149);
+    font-family: 'Courier New', Courier, monospace;
+}
+ul{
+    font-size: 20px;
+    list-style: none;
+}
+body{
+    background-color: rgb(206, 163, 246);
+    text-align: center;
+}
+body h1{
+    font-size: 40px;
+}
+body h2{
+    font-size: 35px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input{
+    font-size: 15px;
+}
+
