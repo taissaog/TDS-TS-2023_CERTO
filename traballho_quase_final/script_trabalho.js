@@ -17,9 +17,13 @@ const musicas = [{
     alternativas: [{id: 1, Text: "Ela não me ama, mas eu gosto assim..."}, {id: 2, Text:"Achei alguém igual eu..."}, {id: 3, Text: "Pulei na piscina, chorei disfarçado..."}]
 }];
 
-    
+function varificacao(alternativas) {
+    musicas.alternativas.StyleSheet.color = rgb(7, 243, 105);
+}
 
-;
+if(alternativas == true){
+ verificacao(alternativas);
+}
 
 
   
