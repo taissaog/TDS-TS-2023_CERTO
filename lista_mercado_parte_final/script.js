@@ -63,3 +63,7 @@ function adicionar_lista() {
 
 var li = document.getElementsByTagName('li').length;
 document.write(h3 + li);
+
+
+criar um função para ler cada lista, não vai precisar da const
+a questão da cor  do botão, criar uma classe para alterar a cor, utilizar o css e usar id em botões
