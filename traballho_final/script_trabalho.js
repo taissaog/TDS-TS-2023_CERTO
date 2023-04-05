@@ -32,6 +32,7 @@ function responder(qest, resp) {
         }
         if (resp != 3) {
             btn1.setAttribute("class", "altera_cor2");
+            btn2.setAttribute("class", "altera_cor2");
         }
     }
     if (qest == 2) {
@@ -43,6 +44,7 @@ function responder(qest, resp) {
         }
         if (resp != 1) {
             btn5.setAttribute("class", "altera_cor2");
+            btn6.setAttribute("class", "altera_cor2");
         }
     }
     if (qest == 3) {
@@ -52,7 +54,9 @@ function responder(qest, resp) {
             // alert("corrreto");
         }
         if (resp != 3) {
-           setAttribute("class", "altera_cor2");
+           btn7.setAttribute("class", "altera_cor2");
+           btn9.setAttribute("class", "altera_cor2");
+
         }
     }
 }
@@ -61,4 +65,3 @@ window.localStorage.setItem("total", JSON.stringify(total));
 
 document.getElementsByTagName('ponto').length;
 document.write("Pontos finais:" + total);
-
