@@ -11,7 +11,9 @@ h1{
 h2{
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-decoration: underline;
+    border: 4px double rgb(0, 0, 0);
+    margin-left: 5%;
+    margin-right: 5%;
 }
 body{
     margin: 0px;
