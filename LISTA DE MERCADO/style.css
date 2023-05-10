@@ -1,0 +1,50 @@
+body{
+    user-select: none;
+}
+.checked{
+    text-decoration: line-through;
+    color: rgb(78, 1, 149);
+    font-family: 'Courier New', Courier, monospace;
+}
+ul{
+    font-size: 20px;
+    list-style: none;
+    border: 4px dotted rgb(169, 89, 254);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+body{
+    background-color: rgb(206, 163, 246);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+body h1{
+    padding: 50px;
+    font-size: 40px;
+    background-image: url("https://lorensonline.com.br/wp-content/uploads/2019/06/Lorens-Crescimento-do-Hortifruti-no-Brasil-legumes-sortidos-1080x675.jpg");
+}
+body h2{
+    font-size: 35px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body h3{
+    font-size: 35px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 4px dotted rgb(169, 89, 254);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+input{
+    padding: 10px 10px ;
+    border-radius: 10px;
+}
+button{
+    background-color: #410090;
+    padding: 10px 10px ;
+    border-radius: 10px;
+    color: #fff;
+}
+
+
