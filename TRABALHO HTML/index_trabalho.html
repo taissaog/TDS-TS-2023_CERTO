@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_trabalho.css">
+
+    <title>Trecho Correto</title>
+</head>
+
+<body>
+    <h1>Qual o trecho da música?</h1>
+    <h2>Clique na alternativa que completa corretamente o trecho da música</h2>
+
+    <div class="musicas">
+        <img src="https://i.scdn.co/image/ab67616d0000b273e78d00b0c0b97b75afbbcfb3">
+        <div class="musica1">"Promessas não são contratos beijos nem sempre são pactos, iê iê, eu deveria saber..."            
+            <form id="form" action="#">
+                <button type="button" id="btn1" onclick="responder(1,1)">Eu nem dormi pensando em tudo que aconteceu, iê
+                    iê...</button>
+                <button type="button" id="btn2" onclick="responder(1,2)">Guardei em mim cada detalhe que a gente viveu, iê
+                    iê...</button>
+                <button type="button" id="btn3" onclick="responder(1,3)" class="alternar_cor">Que sentimentos vazios não preenchem os
+                    espaços...</button>
+            </form>
+        </div>
+
+        <img src="https://i.ytimg.com/vi/otnceDUe-RM/maxresdefault.jpg">
+        <div class="musica2">"Agora o nosso quadro casando na igreja..."
+            <form id="form" action="#">
+                <button type="button" id="btn4" onclick="responder(2,1)">Não vai ser pendurado...</button>
+                <button type="button" id="btn5" onclick="responder(2,2)">Só existe na minha cabeça...</button>
+                <button type="button" id="btn6" onclick="responder(2,3)">Podia ter sido, mas não foi...</button>
+            </form>
+        </div>
+
+        <img src="https://i.scdn.co/image/ab67616d0000b27319bb2fb697a42c1084d71f6c">
+        <div class="musica3">"E olha o que me aconteceu..."
+            <form id="form" action="#">
+                <button type="button" id="btn7" onclick="responder(3,1)">Ela não me ama, mas eu gosto assim...</button>
+                <button type="button" id="btn8" onclick="responder(3,2)">Achei alguém igual eu...</button>
+                <button type="button" id="btn9" onclick="responder(3,3)">Pulei na piscina, chorei disfarçado...</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="script_trabalho.js"></script>
+
+</body>
+</html>
