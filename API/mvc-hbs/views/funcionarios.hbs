@@ -1,0 +1,31 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Data Nasc.</th>
+            <th scope="col">Salário</th>
+            <th scope="col">Status </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td>{{ID}}</td>
+            <td>{{NOME}}</td>
+            <td>{{formataCPF CPF}}</td>
+            <td>{{formataTelefone TELEFONE}}</td>
+            <td>{{formataData DATA_NSC}}</td>
+            <td>R$ {{SALARIO}}</td>
+            {{#if STATUS}}
+            <td>👍</td>
+            {{else}}
+            <td>👎</td>
+            {{/if}}
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>
