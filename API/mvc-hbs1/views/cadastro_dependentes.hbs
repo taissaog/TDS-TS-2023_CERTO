@@ -1,0 +1,49 @@
+<h1 class="display-4">Cadastro de Dependentes</h1>
+
+<form class="form-group" method="POST" action="/dependentes">
+
+    <input type="hidden" id="ID" name="ID" value="{{data.id}}">
+
+    <div class="form-group">
+        <label for="NOME">Nome completo</label>
+        <input type="text" class="form-control" placeholder="Nome completo" id="nome" name="NOME" value="{{data.nome}}"
+            required>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="telefone">Telefone</label>
+            <input type="text" class="form-control" placeholder="(00) 0 0000-0000" id="telefone" name="telefone"
+                maxlength="11" oninput="formataTELEFONE()" value="{{data.telefone}}" required>
+        </div>
+    </div>
+    <div class="dropdown" data-pg-collapsed>
+         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown button
+         </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li>
+                            <a class="dropdown-item" href="#">Action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </div>
+    
+
+    <button type="submit" class="btn btn-primary btn-lg btn-block">
+        Salvar
+    </button>
+    <a class="btn btn-info btn-lg btn-block" href="/funcionarios">Voltar</a>
+</form>
+
+<script>
+    function formataTELEFONE() {
+        let inputTELEFONE = document.getElementById("telefone").value;
+        document.getElementById("telefone").value = inputTELEFONE.replace(/[^\d]/g, "").replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, "($1) $2 $3-$4");
+    }
+</script>
