@@ -1,0 +1,150 @@
+CREATE DATABASE EMPRESA;
+
+USE EMPRESA;
+
+CREATE TABLE alocacao (id INT NOT NULL, area INT NOT NULL, automovel CHAR(10) NOT NULL, quantidade INT NOT NULL);
+CREATE TABLE automoveis(id INT NOT NULL, modelo CHAR(100) NOT NULL, preço INT NOT NULL,  PRIMARY KEY (`ID`));
+CREATE TABLE clientes(id INT NOT NULL, nome VARCHAR(200) NOT NULL,  PRIMARY KEY (`ID`));
+CREATE TABLE concessionarias(id INT NOT NULL, concessionaria VARCHAR(100) NOT NULL, PRIMARY KEY (`ID`));
+
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (1, 1, 1, 1, 8);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (2, 2, 2, 2, 1);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (3, 4, 3, 3, 4);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (4, 7, 4, 4, 6);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (5, 8, 5, 5, 4);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (6, 9, 6, 1, 4);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (7, 10, 7, 2, 1);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (8, 1, 8, 2, 7);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (9, 2, 9, 3, 2);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (10, 4, 10, 4, 6);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (11, 7, 11, 5, 3);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (12, 8, 12, 1, 9);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (13, 9, 13, 2, 9);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (14, 10, 14, 3, 6);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (15, 1, 15, 3, 4);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (16, 2, 16, 4, 1);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (17, 4, 17, 5, 8);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (18, 7, 18, 1, 4);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (19, 8, 19, 2, 10);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (20, 9, 20, 3, 10);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (21, 10, 21, 4, 7);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (22, 1, 22, 4, 3);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (23, 2, 23, 5, 5);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (24, 4, 24, 1, 4);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (25, 7, 25, 2, 3);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (26, 8, 26, 3, 3);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (27, 9, 27, 4, 10);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (28, 10, 28, 5, 4);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (29, 1, 29, 1, 2);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (30, 2, 30, 2, 3);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (31, 4, 31, 3, 4);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (32, 7, 32, 4, 2);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (33, 8, 33, 5, 3);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (34, 9, 34, 1, 4);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (35, 10, 35, 2, 3);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (36, 1, 36, 3, 2);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (37, 2, 37, 4, 3);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (38, 4, 38, 5, 3);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (39, 7, 39, 1, 2);
+INSERT INTO alocacao (ID, area, AUTOMOVEL, CONCESSIONARIA, QUANTIDADE) VALUES (40, 8, 40, 2, 1);
+
+CREATE TABLE alocacao (
+  ID INT,
+  area INT,
+  AUTOMOVEL INT,
+  CONCESSIONARIA INT,
+  QUANTIDADE INT
+);
+
+CREATE TABLE automoveis (
+  ID INT,
+  modelo CHAR(100),
+  preco VARCHAR(20)
+);
+
+INSERT INTO automoveis (ID, modelo, preco) VALUES (1, 'Fiat Strada', 'R$ 43.115,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (2, 'Fiat Argo', 'R$ 47.660,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (3, 'Fiat Mobi', 'R$ 32.102,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (4, 'Jeep Compass', 'R$ 34.950,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (5, 'Hyundai HB20', 'R$ 49.302,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (6, 'Jeep Renegade', 'R$ 36.661,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (7, 'Volkswagen T-Cross', 'R$ 38.182,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (8, 'Fiat Toro', 'R$ 57.733,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (9, 'Hyundai Creta', 'R$ 55.998,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (10, 'Chevrolet S10', 'R$ 51.035,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (11, 'Toyota Corolla Cross', 'R$ 34.544,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (12, 'Toyota Hilux', 'R$ 53.937,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (13, 'Toyota Corolla', 'R$ 55.022,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (14, 'Volkswagen Gol', 'R$ 48.253,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (15, 'Honda HR-V', 'R$ 53.438,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (16, 'Renault Kwid', 'R$ 31.810,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (17, 'Volkswagen Nivus', 'R$ 35.104,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (18, 'Hyundai HB20S', 'R$ 31.855,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (19, 'Ford Ranger', 'R$ 48.927,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (20, 'Fiat Uno', 'R$ 38.111,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (21, 'Fiat Cronos', 'R$ 36.515,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (22, 'Citroën C4 Cactus', 'R$ 53.654,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (23, 'Toyota Yaris Hatchback', 'R$ 55.869,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (24, 'Volkswagen Voyage', 'R$ 30.954,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (25, 'Honda Civic', 'R$ 30.871,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (26, 'Volkswagen Saveiro', 'R$ 32.306,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (27, 'Caoa Chery Tiggo 5x', 'R$ 30.069,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (28, 'Volkswagen Virtus', 'R$ 40.689,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (29, 'Fiat Grand Siena', 'R$ 33.469,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (30, 'Caoa Chery Tiggo 8', 'R$ 48.481,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (31, 'Chevrolet Tracker', 'R$ 30.648,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (32, 'Peugeot 208', 'R$ 46.934,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (33, 'Toyota SW4', 'R$ 54.252,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (34, 'Nissan Frontier', 'R$ 32.596,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (35, 'Honda WR-V', 'R$ 35.139,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (36, 'Volkswagen Taos', 'R$ 47.546,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (37, 'Mitsubishi L200', 'R$ 57.049,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (38, 'Renault Oroch', 'R$ 48.756,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (39, 'Toyota Yaris Sedan', 'R$ 43.077,00');
+INSERT INTO automoveis (ID, modelo, preco) VALUES (40, 'Renault Duster', 'R$ 52.641,00');
+
+CREATE TABLE clientes (
+  ID INT,
+  nome VARCHAR(100)
+);
+
+INSERT INTO clientes (ID, nome) VALUES (1, 'Adalberto Martins da Silva');
+INSERT INTO clientes (ID, nome) VALUES (2, 'Adan Roger Guimarães Dias');
+INSERT INTO clientes (ID, nome) VALUES (3, 'Adão Walter Gomes de Sousa');
+INSERT INTO clientes (ID, nome) VALUES (4, 'Adelson Fernandes Sena');
+INSERT INTO clientes (ID, nome) VALUES (5, 'Ademir Augusto Simões');
+INSERT INTO clientes (ID, nome) VALUES (6, 'Ademir Borges dos Santos');
+INSERT INTO clientes (ID, nome) VALUES (7, 'Adilio José da Silva Santos');
+INSERT INTO clientes (ID, nome) VALUES (8, 'Adriana Ferreira de Lima Teodoro');
+INSERT INTO clientes (ID, nome) VALUES (9, 'Adriano Bezerra Apolinario');
+INSERT INTO clientes (ID, nome) VALUES (10, 'Adriano Heleno Basso');
+INSERT INTO clientes (ID, nome) VALUES (11, 'Adriano Lourenço do Rego');
+INSERT INTO clientes (ID, nome) VALUES (12, 'Adriano Matos Santos');
+INSERT INTO clientes (ID, nome) VALUES (13, 'Adriano Pires Caetano');
+INSERT INTO clientes (ID, nome) VALUES (14, 'Adriano Prada de Campos');
+INSERT INTO clientes (ID, nome) VALUES (15, 'Adriel Alberto dos Santos');
+INSERT INTO clientes (ID, nome) VALUES (16, 'Agner Vinicius Marques de Camargo');
+INSERT INTO clientes (ID, nome) VALUES (17, 'Agrinaldo Ferreira Soares');
+INSERT INTO clientes (ID, nome) VALUES (18, 'Alan Jhonnes Banlian da Silva e Sá');
+INSERT INTO clientes (ID, nome) VALUES (19, 'Alberto Ramos Rodrigues');
+INSERT INTO clientes (ID, nome) VALUES (20, 'Alcides José Ramos');
+INSERT INTO clientes (ID, nome) VALUES (21, 'Aldemir SantAna dos Santos');
+INSERT INTO clientes (ID, nome) VALUES (22, 'Aleksandro Marcelo da Silva');
+INSERT INTO clientes (ID, nome) VALUES (23, 'Alessandro Martins Silva');
+INSERT INTO clientes (ID, nome) VALUES (24, 'Alessandro Sanches');
+INSERT INTO clientes (ID, nome) VALUES (25, 'Alex dos Reis de Jesus');
+INSERT INTO clientes (ID, nome) VALUES (26, 'Alex Ferreira Soares');
+INSERT INTO clientes (ID, nome) VALUES (27, 'Alex Sandro Oliveira');
+INSERT INTO clientes (ID, nome) VALUES (28, 'Alex Souza Farias');
+INSERT INTO clientes (ID, nome) VALUES (29, 'Alexandra de Lima Silva');
+INSERT INTO clientes (ID, nome) VALUES (30, 'Alexandre Clemente da Costa');
+
+CREATE TABLE concessionaria (
+  ID INT,
+  nome_concessionaria VARCHAR(100)
+);
+
+INSERT INTO concessionaria (ID, nome_concessionaria) VALUES (1, 'Atena concessionária');
+INSERT INTO concessionaria (ID, nome_concessionaria) VALUES (2, 'Demétir concessionária');
+INSERT INTO concessionaria (ID, nome_concessionaria) VALUES (3, 'Hera concessionária');
+INSERT INTO concessionaria (ID, nome_concessionaria) VALUES (4, 'Estia concessionária');
