@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TimeTracker - Administrador</title>
+    <link rel="stylesheet" type="text/css" href="./css/adm.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <div class="dropdown" style="float:left;">
+                    <button class="dropbtn"><span class="material-icons">menu</span></button>
+                    <div class="dropdown-content" style="left:0;">
+                        <a href="http://localhost:8080/funcionarios">Editar Funcionários</a>
+                        <a href="#">Funcionários</a>
+                        <a href="#">Setor</a>
+                    </div>
+                </div>
+            </li>
+            <li style="float:right;"><a class="active" href="./index.html"><span class="material-icons">logout</span></a></li>
+        </ul>
+        <hr>
+    </div>
+
+    <center>
+        <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin: 15px 0;">
+            Setor Sala de Máquinas</h2>
+    </center>
+
+    <div style="display: grid; grid-template-columns: 25% 75%">
+        <div style="width:100%; height: auto;" class="DivTdsTarefas">
+            <a href="#">
+                <h4>Todas as tarefas</h4>
+            </a>
+        </div>
+        <div style="width: 100%; height: auto;" class="AddTarefa">
+            <a href="#"><button class="btn-adicionar" onclick="adicionarTarefa()">Adicionar Tarefa</button></a>
+            <div class="Tarefas">
+                <div class="cabe-tarefas">
+                    <h4>Tarefa 1</h4><a href="#"><span class="material-icons expand-icon">chevron_right</span></a>
+                </div>
+                <div class="Recolhivel" style="display: none;">
+                    <div class="dentroDaTarefa">
+                        <textarea rows="5" cols="33" placeholder="Anotação..."></textarea>
+                    </div>
+
+                    <div id="timer">
+                        <input type="text" id="timeInput" placeholder="Tempo Restante (em horas)" class="input-style">
+                        <button id="startTimerButton" class="btn-timer">Iniciar Cronômetro</button>
+                        <button id="resetTimerButton" class="btn-timer">Zerar Cronômetro</button>
+                        <div id="timerDisplay">00:00</div>
+                        <div class="btn-salvar" style="margin-left: 175%;"><button class="btn-adicionar" onclick="salvarTarefa(this.parentNode.parentNode.parentNode)">Salvar</button></div>                       
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
