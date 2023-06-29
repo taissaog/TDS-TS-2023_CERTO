@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TimeTracker - Configurações</title>
+    <link rel="stylesheet" type="text/css" href="./css/ConfigCss.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <div class="dropdown" style="float:left;">
+                    <button class="dropbtn"><span class="material-icons">menu</span></button>
+                    <div class="dropdown-content" style="left:0;">
+                        <a href="configuracoes.html">Configurações</a>
+                        <a href="index.html">Sair</a>
+                    </div>
+                </div>
+            </li>
+            <li style="float:right;"><a class="active" href="./index.html"><span class="material-icons">logout</span></a></li>
+        </ul>
+        <hr>
+    </div>
+
+    <center>
+        <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin: 15px 0;">
+            Página de Configurações</h2>
+    </center>
+
+    <!-- Conteúdo da página de configurações -->
+    <div class="configuracoes">
+        <h3>Reportar Erros</h3>
+        <p>Selecione as opções que se encaixam com sua necessidade:</p>
+        <br>
+        <label>
+            <input type="checkbox" name="opcao1">
+            Mal funcionamento do sistema
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="opcao2">
+            Lentidão no sistema
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="opcao3">
+            Sistema não salvando as tarefas atribuídas
+        </label>
+        <br><br>
+        <p>Outras configurações:</p>
+        <br>
+        <label>
+            <input type="radio" name="radioOpcoes" value="opcao1">
+            Frequentemente
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="radioOpcoes" value="opcao2">
+            Raramente
+        </label>
+        <br>
+        <br>
+        <p>Selecione uma opção:</p>
+        <select>
+            <option value="opcao1">Gestor 1</option>
+            <option value="opcao2">Gestor 2</option>
+            <option value="opcao3">Gestor 3</option>
+        </select>
+        <br>
+        <br>
+        <button onclick="botaoSalvar(this.parentNode.parentNode.parentNode)">Salvar</button>
+    </div>
+    
+    <script>
+        function botaoSalvar(elemento) {
+        Swal.fire('Any fool can use a computer')};
+    </script>
+    
+</body>
+</html>

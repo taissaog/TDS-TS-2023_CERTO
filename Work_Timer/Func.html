@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TimeTracker - Administrador</title>
+    <link rel="stylesheet" type="text/css" href="/css/Func.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div>
+        <ul>
+            <!-- <li><a href="./login.html">Login</a></li> -->
+            <li>
+                <div class="dropdown" style="float:left;">
+                    <button class="dropbtn"><span class="material-icons">menu</span></button>
+                    <div class="dropdown-content" style="left:0;">
+                        <a href="./Config.html">Configurações</a>
+                        <a href="index.html">Sair</a>
+                    </div>
+                </div>
+            </li>
+            <li style="float:right;"><a class="active" href="./index.html"><span class="material-icons">logout</span></a></li>
+        </ul>
+        <hr>
+    </div>
+
+    <center>
+        <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin: 15px 0;">
+            Setor Sala de Máquinas</h2>
+    </center>
+
+    <div style="display: grid; grid-template-columns: 25% 75%">
+        <div style="width:100%; height: auto;" class="DivTdsTarefas">
+            <a href="#">
+                <h4>Todas as tarefas</h4>
+            </a>
+        </div>
+        <div style="width: 100%; height: auto; margin-top: 82px;" class="AddTarefa">
+            <div class="Tarefas">
+                <div class="cabe-tarefas">
+                    <h4>Tarefa 1</h4><a href="#"><span class="material-icons">chevron_right</span></a>
+                </div>
+                <div class="Recolhivel" style="display: none;">
+                    <div class="dentroDaTarefa">
+                        <h2>Fazer café quando for hora do almoço.</h2>
+                    </div>
+                    <div id="timer" class="timer">89:20</div>
+                    <button class="marca-lida-btn" onclick="marcarConcluida(this)">Marcar Como Concluída</button>
+                    <a class="whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=+5546999782736&text=Ol%C3%A1,%20gostaria%20de%20iniciar%20uma%20conversa!">Fazer Upload de Arquivos</a>
+                </div>
+            </div>
+            <div class="Tarefas">
+                <div class="cabe-tarefas">
+                    <h4 style="color: red;">Tarefa 2</h4><a href="#"><span class="material-icons">chevron_right</span></a>
+                </div>
+                <div class="Recolhivel" style="display: none;">
+                    <div class="dentroDaTarefa">
+                        <h2>Teste 123</h2>
+                    </div>
+                    <button class="marca-lida-btn" onclick="marcarConcluida(this)">Marcar Como Concluída</button>
+                    <a class="whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=+5546999782736&text=Ol%C3%A1,%20gostaria%20de%20iniciar%20uma%20conversa!">Fazer Upload de Arquivos</a>
+                    <div id="timer2" class="timer" style="color: red;">00:00</div>
+                </div>
+            </div>
+            <div class="Tarefas">
+                <div class="cabe-tarefas">
+                    <h4 style="color: red;">Tarefa 3</h4><a href="#"><span class="material-icons">chevron_right</span></a>
+                </div>
+                <div class="Recolhivel" style="display: none;">
+                    <div class="dentroDaTarefa">
+                        <h2>aiosjfgoiajewg</h2>
+                    </div>
+                    <button class="marca-lida-btn" onclick="marcarConcluida(this)">Marcar Como Concluída</button>
+                    <a class="whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=+5546999782736&text=Ol%C3%A1,%20gostaria%20de%20iniciar%20uma%20conversa!">Fazer Upload de Arquivos</a>
+                    <div id="timer" class="timer" style="color: red;">00:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+          var minutes = 89;
+          var seconds = 20;
+          
+          var countdown = setInterval(function() {
+            seconds--;
+            if (seconds < 0) {
+              minutes--;
+              seconds = 59;
+            }
+            
+            if (minutes < 0) {
+              clearInterval(countdown);
+              alert("Tempo esgotado!");
+            }
+            
+            document.getElementById("timer").textContent = padZero(minutes) + ":" + padZero(seconds);
+          }, 1000);
+          
+          function padZero(num) {
+            return (num < 10 ? "0" : "") + num;
+          }
+        }
+    </script>
+
+    <script>
+        // Função para marcar a tarefa como concluída
+        function marcarConcluida(button) {
+            var tarefa = button.parentNode.parentNode;
+            tarefa.style.display = 'none';
+
+            // Verifica se todas as tarefas estão concluídas
+            var todasConcluidas = true;
+            var tarefas = document.getElementsByClassName('Tarefas');
+            for (var i = 0; i < tarefas.length; i++) {
+                if (tarefas[i].style.display !== 'none') {
+                    todasConcluidas = false;
+                    break;
+                }
+            }
+
+            // Exibe o texto "Nenhuma tarefa pendente" se todas as tarefas estiverem concluídas
+            if (todasConcluidas) {
+                var textoNenhumaTarefa = document.createElement('h4');
+                textoNenhumaTarefa.textContent = 'Nenhuma tarefa pendente';
+                textoNenhumaTarefa.style.marginTop = '20px';
+                textoNenhumaTarefa.style.textAlign = 'left';
+                textoNenhumaTarefa.style.fontWeight = 'normal';
+                textoNenhumaTarefa.style.fontStyle = 'italic';
+                textoNenhumaTarefa.style.fontFamily = 'Arial, sans-serif';
+                tarefa.parentNode.appendChild(textoNenhumaTarefa);
+            }
+        }
+
+        // Função para controlar o evento de clique no ícone
+        function toggleCollapse(event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+            // Obtém a div recolhível correspondente
+            var collapsibleDiv = event.target.parentNode.parentNode.nextElementSibling;
+            // console.log(event.target.parentNode.parentNode.nextElementSibling);
+
+            // Alterna a exibição da div recolhível
+            if (collapsibleDiv.style.display === 'none') {
+                collapsibleDiv.style.display = 'inline-block';
+                event.target.textContent = "expand_more";
+            } else {
+                collapsibleDiv.style.display = 'none';
+                event.target.textContent = "chevron_right";
+            }
+        }
+
+        // Obtém todos os ícones de colapso
+        var collapseIcons = document.getElementsByClassName('material-icons');
+
+        // Adiciona um ouvinte de eventos de clique a cada ícone
+        for (var i = 0; i < collapseIcons.length; i++) {
+            collapseIcons[i].addEventListener('click', toggleCollapse);
+        }
+    </script>
+</body>
+
+</html>
